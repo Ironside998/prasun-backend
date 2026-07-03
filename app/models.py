@@ -5,7 +5,7 @@ from datetime import datetime
 from .database import Base
 
 
-cclass DSMRun(Base):
+class DSMRun(Base):
     __tablename__ = "dsm_runs"
     id = Column(Integer, primary_key=True, index=True)
     created_at = Column(DateTime, default=datetime.utcnow)
