@@ -1,0 +1,11 @@
+# render.yaml  (optional: lets Render build the Docker image automatically)
+services:
+  - type: web
+    name: dsm-backend
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: dsm-data
+      mountPath: /data      # persists the SQLite file across deploys
+      sizeGB: 1
